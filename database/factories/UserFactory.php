@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Chat;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -20,9 +21,24 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
+        'avatar' => 'https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png',
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => bcrypt('12345678'), // password
         'remember_token' => Str::random(10),
+    ];
+});
+
+$factory->define(Chat::class, function (Faker $faker) {
+    do {
+        $from       = rand(1, 10);
+        $to         = rand(1, 10);
+        $is_read    = rand(0, 1);
+    } while ($from === $to);
+    return [
+        'from'      => $from,
+        'to'        => $to,
+        'message'   => $faker->sentence(),
+        'is_read'   => $is_read
     ];
 });

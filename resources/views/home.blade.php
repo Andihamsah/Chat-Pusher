@@ -6,181 +6,124 @@
         <div class="col-md-4">
             <div class="user-wrapper">
                 <ul class="users">
-                    <li class="user">
+                    @foreach ($user as $users)
+                    <li class="user" id="{{$users->id}}">
                         <span class="pending">1</span>
 
                         <div class="media">
                             <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
+                                <img src="{{$users->avatar}}" alt="" class="media-object" style="height: 80px">
                             </div>
 
                             <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
+                                <p class="name">{{$users->name}}</p>
+                                <p class="email">{{$users->email}}</p>
                             </div>
                         </div>
                     </li>
-                    <li class="user">
-                        <span class="pending">10</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="user">
-                        <span class="pending">1</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="user">
-                        <span class="pending">1</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="user">
-                        <span class="pending">1</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="user">
-                        <span class="pending">1</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="user">
-                        <span class="pending">1</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="user">
-                        <span class="pending">1</span>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="https://img.pngio.com/avatar-icon-png-105-images-in-collection-page-3-avatarpng-512_512.png" alt="" class="media-object" style="height: 80px">
-                            </div>
-
-                            <div class="media-body">
-                                <p class="name">blabla</p>
-                                <p class="email">blabla@gmail.com</p>
-                            </div>
-                        </div>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
 
         <div class="col-md-8" id="messages">
-            <div class="message-wrapper">
-                <ul class="messages">
-                    <li class="message clearfix">
-                        <div class="send">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="received">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="send">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="received">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="received">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="send">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="send">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                    <li class="message clearfix">
-                        <div class="received">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero perspiciatis minima, iusto ad, delectus suscipit sint aut minus laudantium at, qui vero molestias adipisci exercitationem! Rem suscipit fuga vero non.</p>
-                            <p class="date">Selasa, 13 Oktober 2020</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
 
-            <input type="text" name="message" class="submit">
         </div>
     </div>
 </div>
 @endsection
+@section('js')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var receiver_id = "";
+    var my_id       = {{Auth::id()}};
+
+    $(document).ready(function () {
+        // ajax setup from csrf token
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        })
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('9625e2ea60c972431c47', {
+        cluster: 'ap1'
+        });
+
+        var channel = pusher.subscribe('my-channel');
+        channel.bind('my-event', function(data) {
+        alert(JSON.stringify(data));
+        });
+
+        $('.user').click(function () {
+            $('.user').removeClass('active');
+            $(this).addClass('active');
+
+            receiver_id = $(this).attr('id')
+            $.ajax({
+                type: "get",
+                url: "message/" + receiver_id,
+                data: "",
+                cache: false,
+                success: function (data) {
+                    $('#messages').html(data);
+                }
+            })
+        })
+
+        $(document).on('keyup', '.input-text input', function (e) {
+            var message = $(this).val();
+
+            // periksa apakah tombol enter ditekan dan pesan tidak nol juga penerima dipilih
+            if (e.keyCode == 13 && message != '' && receiver_id != '') {
+                $(this).val('');//saat ditekan masuk kotak teks akan kosong
+
+                var datastr = "receiver_id=" + receiver_id + "&message=" + message
+
+                $.ajax({
+                    type: "post",
+                    url: "message",  //need to create this post route
+                    data: datastr,
+                    cache: false,
+                    success: function (data) {
+                        
+                    },
+                    error: function(jqXHR, status, err) {
+
+                    },
+                    complete: function() {
+
+                    }
+
+                })
+            }
+        })
+    })
+</script>
+
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
